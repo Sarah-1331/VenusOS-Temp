@@ -38,7 +38,7 @@ if [ $scriptAction == 'INSTALL' ] ; then
 	if [ $(grep -c "w1-gpio" "$configFile") == 0 ]; then
         logMessage "activating 1-Wire overlay"
         echo "#### Change 1-Wire Temperatursensor GPIO"  >> "$configFile"
-		echo "dtoverlay=w1-gpio,gpiopin=26" >> "$configFile"
+		echo "dtoverlay=w1-gpio,gpiopin=4" >> "$configFile"
 		echo "#### end change 1-Wire GPIO" >> "$configFile"
         filesUpdated=true
     fi
